@@ -7,6 +7,7 @@ import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 import com.opensymphony.sitemesh.webapp.SiteMeshFilter;
+import sample.mybatis.service.UserServiceImpl;
 
 /**
  * Java Config for this application.  Life begins here.
@@ -18,7 +19,7 @@ public class AppInitializer extends AbstractAnnotationConfigDispatcherServletIni
 	@Override
 	protected Class<?>[] getRootConfigClasses() {
 		// MDC.put("environment", System.getenv("APP_ENV") != null ? System.getenv("APP_ENV") : "dev");
-		return new Class<?>[]{DatabaseConfig.class};
+		return new Class<?>[]{DatabaseConfig.class, UserServiceImpl.class};
 	}
 
 	@Override

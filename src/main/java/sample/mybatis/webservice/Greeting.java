@@ -1,4 +1,4 @@
-package hello.rest;
+package sample.mybatis.webservice;
 
 public class Greeting {
 

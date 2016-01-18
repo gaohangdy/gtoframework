@@ -1,21 +1,22 @@
 package sample.mybatis.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import java.util.List;
 import sample.mybatis.domain.User;
-import sample.mybatis.persistence.UserMapper;
 
-@Service
-public class UserService {
 
-    @Autowired
-    private UserMapper userMapper;
+/**
+ * @author lanyonm
+ */
+public interface UserService {
 
-    public int addUser(User userToAdd) {
-        return userMapper.addUser(userToAdd);
-    }
+	/**
+	 * @return a list of all {@link User}s
+	 */
+	public int addUser(User userToAdd);
+	/**
+	 * @param user
+	 * @return success
+	 */
+	public User getUser(int userId);
 
-    public User getUser(int userId) {
-        return userMapper.getUser(userId);
-    }
 }
