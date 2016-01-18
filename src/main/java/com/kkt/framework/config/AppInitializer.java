@@ -1,4 +1,4 @@
-package hello;
+package com.kkt.framework.config;
 
 import javax.servlet.Filter;
 
@@ -7,7 +7,7 @@ import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 import com.opensymphony.sitemesh.webapp.SiteMeshFilter;
-import sample.mybatis.service.UserServiceImpl;
+import com.kkt.hycount.service.UserServiceImpl;
 
 /**
  * Java Config for this application.  Life begins here.
@@ -24,7 +24,7 @@ public class AppInitializer extends AbstractAnnotationConfigDispatcherServletIni
 
 	@Override
 	protected Class<?>[] getServletConfigClasses() {
-		return new Class<?>[]{MvcConfig.class};
+		return new Class<?>[]{MvcWebConfig.class};
 	}
 
 	@Override

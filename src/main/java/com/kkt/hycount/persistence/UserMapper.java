@@ -1,9 +1,9 @@
-package sample.mybatis.persistence;
+package com.kkt.hycount.persistence;
 
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
 
-import sample.mybatis.domain.User;
+import com.kkt.hycount.domain.User;
 
 public interface UserMapper {
 

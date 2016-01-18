@@ -1,4 +1,4 @@
-package hello;
+package com.kkt.framework.config;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;

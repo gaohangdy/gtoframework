@@ -1,4 +1,4 @@
-package hello;
+package com.kkt.framework.config;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -8,8 +8,8 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 
 @Configuration
 @EnableWebMvc
-@ComponentScan("sample.mybatis")
-public class MvcConfig extends WebMvcConfigurerAdapter {
+@ComponentScan("com.kkt.*.controller, com.kkt.*.webservice, com.kkt.*.service")
+public class MvcWebConfig extends WebMvcConfigurerAdapter {
     
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {

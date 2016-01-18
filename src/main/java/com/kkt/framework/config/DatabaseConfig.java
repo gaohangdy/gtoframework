@@ -1,4 +1,4 @@
-package hello;
+package com.kkt.framework.config;
 
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
@@ -13,7 +13,7 @@ import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import static org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType.H2;
 
 @Configuration
-@MapperScan("sample.mybatis.persistence")
+@MapperScan("com.kkt.*.persistence")
 public class DatabaseConfig {
 
     @Bean
@@ -36,7 +36,7 @@ public class DatabaseConfig {
     public SqlSessionFactoryBean sqlSessionFactory() throws Exception {
         SqlSessionFactoryBean sessionFactory = new SqlSessionFactoryBean();
         sessionFactory.setDataSource(dataSource());
-        sessionFactory.setTypeAliasesPackage("sample.mybatis.domain");
+//        sessionFactory.setTypeAliasesPackage("sample.mybatis.domain");
         return sessionFactory;
     }
 

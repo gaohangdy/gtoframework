@@ -1,4 +1,4 @@
-package sample.mybatis.webservice;
+package com.kkt.hycount.webservice;
 
 public class Greeting {
 

@@ -1,12 +1,12 @@
-package sample.mybatis.webservice;
+package com.kkt.hycount.webservice;
 
 import java.util.concurrent.atomic.AtomicLong;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import sample.mybatis.domain.User;
-import sample.mybatis.service.UserServiceImpl;
+import com.kkt.hycount.domain.User;
+import com.kkt.hycount.service.UserServiceImpl;
 
 @RestController
 public class RestGreetingController {

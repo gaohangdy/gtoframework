@@ -1,9 +1,9 @@
-package sample.mybatis.service;
+package com.kkt.hycount.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import sample.mybatis.domain.User;
-import sample.mybatis.persistence.UserMapper;
+import com.kkt.hycount.domain.User;
+import com.kkt.hycount.persistence.UserMapper;
 
 @Service("userService")
 public class UserServiceImpl implements UserService {

@@ -1,4 +1,4 @@
-package hello;
+package com.kkt.hycount.controller;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,4 +1,4 @@
-package sample.mybatis.domain;
+package com.kkt.hycount.domain;
 
 public class User {
 

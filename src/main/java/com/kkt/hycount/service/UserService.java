@@ -1,7 +1,7 @@
-package sample.mybatis.service;
+package com.kkt.hycount.service;
 
 import java.util.List;
-import sample.mybatis.domain.User;
+import com.kkt.hycount.domain.User;
 
 
 /**
