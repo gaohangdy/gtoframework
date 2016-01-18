@@ -19,7 +19,7 @@ public class AppInitializer extends AbstractAnnotationConfigDispatcherServletIni
 	@Override
 	protected Class<?>[] getRootConfigClasses() {
 		// MDC.put("environment", System.getenv("APP_ENV") != null ? System.getenv("APP_ENV") : "dev");
-		return new Class<?>[]{DatabaseConfig.class, UserServiceImpl.class};
+		return new Class<?>[]{DatabaseConfig.class};
 	}
 
 	@Override
