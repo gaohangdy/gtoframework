@@ -1,31 +1,40 @@
 package sample.mybatis.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-
-
-/**
- * User实体类，将同时用于Mybatis和JPA使用
- *
- * @author 小翼
- * @version 1.0.0
- */
-@Entity
 public class User {
-	@Id
-	private String username;
 
-	/**
-	 * @return the username
-	 */
-	public String getUsername() {
-		return username;
+	private int id;
+	private String email;
+	private String userName;
+	
+	public User() {}
+
+    public User(String email, String userName) {
+        this.email = email;
+        this.userName = userName;
+    }
+
+    public int getId() {
+		return id;
 	}
 
-	/**
-	 * @param username the username to set
-	 */
-	public void setUsername(String username) {
-		this.username = username;
+	public void setId(int id) {
+		this.id = id;
 	}
+
+	public String getEmail() {
+		return email;
+	}
+	
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	
+	public String getUserName() {
+		return userName;
+	}
+	
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+	
 }
