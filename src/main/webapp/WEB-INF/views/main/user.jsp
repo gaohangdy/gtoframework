@@ -22,17 +22,25 @@
     <!-- End Page Header -->
     <div class="row">      
         <!--<div class="col-md-12">-->	           
-            <div class="panel panel-default">
-                <div class="panel-body">
-                    <a class="bk-margin-5 modal-with-form btn btn-labeled btn-primary" onclick="$('#userForm').find('input[name=userId]').removeAttr('readonly', 'readonly');" 
-                       href="#modalFormUser">
-                        <span class="btn-label"><i class="fa fa-plus"></i></span>新建用户
-                    </a>                     
-                    <%@include file="../create/user.jsp"%>
-                </div>
-            </div>          
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <a class="bk-margin-5 modal-with-form btn btn-labeled btn-primary" onclick="$('#userForm').find('input[name=userId]').removeAttr('readonly', 'readonly');" 
+                   href="#modalFormUser">
+                    <span class="btn-label"><i class="fa fa-plus"></i></span>新建用户
+                </a>   
+                <span class="btn btn-primary fileinput-button">
+                    <i class="fa fa-upload"></i>
+                    <span>上传</span>
+                    <!-- The file input field used as target for the file upload widget -->
+                    <input id="fileupload" type="file" name="files[]" multiple>
+                </span>
 
-            <%@include file="../list/user.jsp"%>
+
+                <%@include file="../create/user.jsp"%>
+            </div>
+        </div>          
+
+        <%@include file="../list/user.jsp"%>
         <!--</div>-->
     </div>
 </div>

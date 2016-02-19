@@ -36,6 +36,7 @@
 <!-- Page CSS -->		
 <link href="resources/assets/css/style.css" rel="stylesheet" />
 <link href="resources/assets/css/add-ons.min.css" rel="stylesheet" />
+<link href="resources/assets/css/jquery.fileupload.css" rel="stylesheet" />
 
 <!-- end: CSS file-->	
 

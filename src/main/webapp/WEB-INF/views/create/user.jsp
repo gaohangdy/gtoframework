@@ -97,7 +97,7 @@
                     <div class="form-group">
                         <label class="col-md-2 control-label" for="text-input">用户头像：</label>
                         <%@include file="../common/uploadPreview.jsp"%>
-                    </div>  
+                    </div> 
                     <div class="row">
                         <div class="col-sm-9 col-sm-offset-3">
                             <button class="bk-margin-5 btn btn-info">保存</button>
