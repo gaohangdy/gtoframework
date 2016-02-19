@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hy.mgm.persistence.CourseMapper">
+  <select id="selectCourses" resultType="com.hy.mgm.page.CoursePage">
+      SELECT
+      C.coursetitle as coursetitle,
+      C.coursetheme as coursetheme,
+      C.sdate as sdate,
+      to_char(C.sdate, 'yyyy-MM-dd') as sdate,
+      to_char(C.edate, 'yyyy-MM-dd') as edate,
+      C.location as location,
+      C.maxcomp as maxcomp,
+      C.maxstudent as maxstudent,
+      SU.userid as userid,
+      SU.username as teachername,
+      CASE WHEN stu.studentnum is not null then stu.studentnum 
+      ELSE 0 
+      END
+      AS studentnum
+      FROM T_COURSE C 
+      LEFT JOIN (SELECT S.courseid, S.userid, U.username FROM T_SCHEDULE S INNER JOIN M_USER U ON S.USERID = U.USERID) SU
+      ON C.COURSEID = SU.COURSEID
+      LEFT JOIN (SELECT courseid, COUNT(*) as studentnum FROM T_STUDENT group by courseid) stu on stu.courseid = c.courseid 
+      WHERE C.SDATE > CURRENT_DATE
+  </select>
+</mapper>

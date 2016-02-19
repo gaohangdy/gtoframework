@@ -1,0 +1,67 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+        <title>和英管理系统</title>
+        <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+        <link href="resources/css/font-awesome.min.css" rel="stylesheet"/>
+        <link href="resources/css/prettyPhoto.css" rel="stylesheet"/>
+        <link href="resources/css/price-range.css" rel="stylesheet"/>
+        <link href="resources/css/animate.css" rel="stylesheet"/>
+        <link href="resources/css/main.css" rel="stylesheet"/>
+        <link href="resources/css/responsive.css" rel="stylesheet"/>
+
+        <!-- start: CSS file-->
+        <!-- Vendor CSS-->
+        <link href="resources/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="resources/assets/vendor/skycons/css/skycons.css" rel="stylesheet" />
+        <link href="resources/assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+
+        <!-- Plugins CSS-->
+        <link href="resources/assets/plugins/bootkit/css/bootkit.css" rel="stylesheet" />	
+
+        <!-- Theme CSS -->
+        <link href="resources/assets/css/jquery.mmenu.css" rel="stylesheet" />
+
+        <!-- Page CSS -->		
+        <link href="assets/css/style.css" rel="stylesheet" />
+        <link href="assets/css/add-ons.min.css" rel="stylesheet" />        
+
+        <!-- end: CSS file-->	
+
+        <!-- Head Libs -->
+        <script src="assets/plugins/modernizr/js/modernizr.js"></script>
+    </head>
+    <body>        
+        <section id="form"><!--form-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4 col-sm-offset-4">
+                        <img src="resources/images/new/logo.jpg" alt="">
+<!--                        <div th:if="${param.error}">
+                            Invalid username and password.
+                        </div>
+                        <div th:if="${param.logout}">
+                            You have been logged out.
+                        </div>                        -->
+                            <div class="login-form"><!--login form-->
+                                <h2>用户登录</h2>
+                                <form action="${pageContext.servletContext.contextPath}/login" method="post">
+                                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
+                                        <input type="text" name="username" placeholder="用户名" />
+                                        <input type="password" name="password" placeholder="密码" />
+                                        <span>
+                                            <input type="checkbox" class="checkbox"/> 
+                                            自动登录
+                                        </span>
+                                        <button type="submit" class="btn btn-default">登录</button>
+                                </form>
+                            </div><!--/login form-->
+                    </div>
+                </div>
+            </div>
+        </section><!--/form-->        
+    </body>
+</html>

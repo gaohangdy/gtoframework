@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=GBK"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+        <title>��Ӣ����-��ӭ��¼</title>
+        <link href="template/css/bootstrap.min.css" rel="stylesheet"/>
+        <link href="template/css/font-awesome.min.css" rel="stylesheet"/>
+        <link href="template/css/prettyPhoto.css" rel="stylesheet"/>
+        <link href="template/css/price-range.css" rel="stylesheet"/>
+        <link href="template/css/animate.css" rel="stylesheet"/>
+        <link href="template/css/main.css" rel="stylesheet"/>
+        <link href="template/css/responsive.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <section id="form"><!--form-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4 col-sm-offset-4">
+                        <div th:if="${param.error}">
+                            Invalid username and password.
+                        </div>
+                        <div th:if="${param.logout}">
+                            You have been logged out.
+                        </div>                        
+                        <div class="login-form"><!--login form-->
+                            <h2>�û���¼</h2>
+                            <form th:action="@{/login}" method="post">
+                                <input type="text" name="username" placeholder="�û���" />
+                                <input type="password" name="password" placeholder="����" />
+                                <span>
+                                    <input type="checkbox" class="checkbox"/> 
+                                        �Զ���¼
+                                </span>
+                                <button type="submit" class="btn btn-default">��¼</button>
+                            </form>
+                        </div><!--/login form-->
+                    </div>
+                </div>
+            </div>
+        </section><!--/form-->        
+    </body>
+</html>

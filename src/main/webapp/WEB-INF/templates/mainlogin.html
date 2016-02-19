@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="/js/base/jquery-1.12.0.min"></script>
+        <script src="/js/base/knockout-3.4.0.js"></script>
+        <!--<script src="/scripts/Account/Login.js"></script>-->
+        <script src="/bootstrap/js/bootstrap.min.js"></script>
+        <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="/bootstrap/css/themes/signin.css" rel="stylesheet" />        
+    </head>
+    <body>
+        <div class="container">
+            <div class="form-signin">
+                <h2 class="form-signin-heading">Please sign in</h2>
+                <input type="email" data-bind="value:accountName" autofocus="" required="" placeholder="Email address" class="form-control">
+                <input type="password" data-bind="value:password" required="" placeholder="Password" class="form-control">
+                <div class="row">
+                    <div class="col-sm-7">
+                        <input type="email" data-bind="value:verifyCode" autofocus="" required="" placeholder="Email address" class="form-control">
+                    </div>
+                    <div class="col-sm-3">
+                        <img height="24" title="点击刷新验证码" data-bind="attr: { 'src': verifyimageSrc },click:ImageOnClick" />
+                    </div>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" value="remember-me" data-bind="checked:isRemember"> Remember me
+                    </label>
+                </div>
+                <input type="button" class="btn btn-lg btn-primary btn-block"
+                       data-bind="click:submit" value="Sign in"/>
+            </div>
+        </div>
+    </body>
+</html>
